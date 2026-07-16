@@ -22,7 +22,6 @@ This website is built using [Jekyll](https://jekyllrb.com/) and the [al-folio](h
 2. Start the local server:
 ```bash
 docker compose up
-
 ```
 
 
