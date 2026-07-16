@@ -13,10 +13,9 @@ This website is built using [Jekyll](https://jekyllrb.com/) and the [al-folio](h
 
 ### Quick Start
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/MBricq/mbricq.github.io.git](https://github.com/MBricq/mbricq.github.io.git)
-   cd mbricq.github.io
-
+```bash
+git clone [https://github.com/MBricq/mbricq.github.io.git](https://github.com/MBricq/mbricq.github.io.git)
+cd mbricq.github.io
 ```
 
 2. Start the local server:
@@ -36,5 +35,3 @@ The site is automatically built and deployed via GitHub Pages using GitHub Actio
 ## Acknowledgements
 
 This website is powered by the [al-folio](https://github.com/alshedivat/al-folio) theme, a beautiful and feature-rich Jekyll template designed for academics.
-
-```
