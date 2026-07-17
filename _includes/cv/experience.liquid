@@ -1,0 +1,67 @@
+<ul class="cv-entry-list">
+  {% for entry in entries %}
+    <li class="cv-entry">
+      <div class="cv-entry-date-col">
+        {% capture start_date %}
+          {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+        {% endcapture %}
+        {% capture end_date %}
+          {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+        {% endcapture %}
+
+        {% if start_date != '' %}
+          {% assign startDate = start_date | split: '-' | first %}
+          {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+          {% assign date = startDate | append: ' - ' | append: endDate %}
+        {% else %}
+          {% assign date = null %}
+        {% endif %}
+
+        {% if date %}
+          <div class="cv-date">{{ date }}</div>
+        {% endif %}
+
+        {% capture location %}
+          {% if entry.location %}{{ entry.location }}{% endif %}
+        {% endcapture %}
+        {% if location != '' %}
+          <div class="cv-location">{{ location }}</div>
+        {% endif %}
+      </div>
+
+      <div class="cv-entry-content">
+        {% capture position %}
+          {% if entry.position %}{{ entry.position }}{% endif %}
+        {% endcapture %}
+
+        {% if entry.url %}
+          <h6 class="title font-weight-bold">
+            <a href="{{ entry.url }}">{{ position }}</a>
+          </h6>
+        {% elsif position != '' %}
+          <h6 class="title font-weight-bold">{{ position }}</h6>
+        {% endif %}
+
+        {% if entry.name or entry.company %}
+          <h6 style="font-size: 0.95rem">
+            {% if entry.name %}{{ entry.name }}{% else %}{{ entry.company }}{% endif %}
+          </h6>
+        {% endif %}
+
+        {% if entry.summary %}
+          <h6 style="font-size: 0.95rem; font-style: italic">{{ entry.summary }}</h6>
+        {% endif %}
+
+        {% if entry.highlights %}
+          <ul class="items">
+            {% for item in entry.highlights %}
+              <li>
+                <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

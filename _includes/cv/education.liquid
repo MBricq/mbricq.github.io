@@ -1,0 +1,70 @@
+<ul class="cv-entry-list">
+  {% for entry in entries %}
+    <li class="cv-entry">
+      <div class="cv-entry-date-col">
+        {% capture start_date %}
+          {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+        {% endcapture %}
+        {% capture end_date %}
+          {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+        {% endcapture %}
+
+        {% if start_date != '' %}
+          {% assign startDate = start_date | split: '-' | first %}
+          {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+          {% assign date = startDate | append: ' - ' | append: endDate %}
+        {% else %}
+          {% assign date = null %}
+        {% endif %}
+
+        {% if date %}
+          <div class="cv-date">{{ date }}</div>
+        {% endif %}
+
+        {% capture location %}
+          {% if entry.location %}{{ entry.location }}{% endif %}
+        {% endcapture %}
+        {% if location != '' %}
+          <div class="cv-location">{{ location }}</div>
+        {% endif %}
+      </div>
+
+      <div class="cv-entry-content">
+        {% capture study_type %}
+          {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
+        {% endcapture %}
+
+        {% if entry.url %}
+          <h6 class="title font-weight-bold">
+            <a href="{{ entry.url }}">{{ study_type }}</a>
+          </h6>
+        {% elsif study_type != '' %}
+          <h6 class="title font-weight-bold">{{ study_type }}</h6>
+        {% endif %}
+
+        {% if entry.institution %}
+          <h6 style="font-size: 0.95rem">{{ entry.institution }}</h6>
+        {% endif %}
+
+        {% if entry.area %}
+          <h6 style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+        {% endif %}
+
+        {% if entry.courses or entry.highlights %}
+          <ul class="items">
+            {% for item in entry.courses %}
+              <li>
+                <span class="item">{{ item }}</span>
+              </li>
+            {% endfor %}
+            {% for item in entry.highlights %}
+              <li>
+                <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
