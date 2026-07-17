@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Projects
+title: projects
 permalink: /projects/
-description: Project portfolio.
+description: A collection of projects I've built over the years—spanning my academic studies, robotics research, and just for the pure joy of coding.
 nav: true
 nav_order: 1
 horizontal: false
@@ -17,7 +17,7 @@ horizontal: false
     <h2 class="category">{{ category }}</h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
+  {% assign sorted_projects = categorized_projects | sort: "date" | reverse %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
@@ -40,7 +40,7 @@ horizontal: false
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+{% assign sorted_projects = site.projects | sort: "date" | reverse %}
 
   <!-- Generate cards for each project -->
 
