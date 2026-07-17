@@ -1,0 +1,56 @@
+<style>
+  .fixed-height-img {
+    height: 200px; /* You can adjust this value to make them taller or shorter */
+    object-fit: cover;
+  }
+</style>
+
+<div class="col">
+  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+    <div class="card h-100 hoverable">
+      {% if project.img %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=project.img
+          sizes="250px"
+          alt="project thumbnail"
+          class="card-img-top fixed-height-img"
+        %}
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title">{{ project.title }}</h2>
+
+        <!-- Custom Tag Pills -->
+        {% if project.tags %}
+          <div class="mb-2">
+            {% for tag in project.tags %}
+              <span style="display: inline-block; background-color: #f0f2f5; color: #43719b; border-radius: 9999px; padding: 0.15rem 0.6rem; font-size: 0.8rem; margin-right: 0.3rem;">
+                {{ tag }}
+              </span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <p class="card-text">{{ project.description }}</p>
+
+        <!-- GitHub and external links -->
+        <div class="row ml-1 mr-1 p-0">
+          {% if project.github %}
+            <div class="github-icon">
+              <div class="icon" data-toggle="tooltip" title="Code Repository">
+                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
+              </div>
+              {% if project.github_stars %}
+                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                  <i class="fa-solid fa-star"></i>
+                  <span id="{{ project.github_stars }}-stars"></span>
+                </span>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
