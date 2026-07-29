@@ -6,6 +6,7 @@ img: assets/img/biorob-actuator.jpg
 importance: 1
 date: 2026-07-01
 category: Academic
+github: https://www.github.com/MBricq/SoftProprio3D/
 tags: ["BioRob", "Soft Robotics", "Proprioception", "State Estimation", "Video"]
 ---
 
@@ -18,6 +19,8 @@ A core challenge in soft robotics is determining the exact position of the robot
 To address this, we developed a lightweight proprioceptive approach to reconstruct the 3D pose of a cable-driven soft actuator.
 
 Instead of relying on extensive data-driven training or complex material modifications, our method embeds a single commercial capacitive bend sensor directly inside the actuator's central core. This sensor measures the net tip bending, which is then mapped to the full actuator shape using a Piecewise Constant Curvature (PCC) model.
+
+The code is accessible on [GitHub](https://www.github.com/MBricq/SoftProprio3D/).
 
 ### Key Results
 
