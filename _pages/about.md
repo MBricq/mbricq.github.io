@@ -6,7 +6,7 @@ subtitle: Ph.D. Student in Mechanical Engineering at Politecnico di Milano.
 
 profile:
   align: right
-  image: photo_cv.jpg
+  image: photo_cv.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Politecnico di Milano</p>
