@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mbricq.github.io/sitemap.xml
+Sitemap: https://marinbricq.com/sitemap.xml
