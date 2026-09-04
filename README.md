@@ -1,6 +1,6 @@
 # Marin Bricq - Academic Portfolio
 
-Source code for my personal academic website, hosted at [mbricq.github.io](https://mbricq.github.io).
+Source code for my personal academic website, hosted at [marinbricq.com](https://marinbricq.com).
 
 This repository contains my portfolio, publications, and projects related to my PhD research in Mechanical Engineering and Bio-engineering at Politecnico di Milano. The site highlights my work on active inference, collaborative robotics, and the SERENA upper-limb cable-driven soft silicone exosuit.
 
