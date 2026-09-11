@@ -29,3 +29,5 @@ My current R&D work focuses on two main areas:
 My technical background is heavily rooted in embedded systems and control. I previously worked as an Embedded Software Engineer Intern at Logitech, developing C firmware for tight time synchronization across wireless devices. I regularly develop pipelines and simulations using C, C++, Rust, and Python, alongside engineering platforms like SOFA, FreeCAD, and KiCAD.
 
 Beyond research, I am deeply committed to education. I currently co-supervise master's thesis students at Polimi and teach Healthcare Robotics laboratories for Humanitas University. Previously, I served as a tutor for numerous courses at EPFL, mentoring students in image processing, logical systems, and electronics.
+
+Outside of the lab and classroom, I stay active by running, climbing, and hiking the Alpine trails between Italy and Switzerland. When I am not in the mountains, I spend a good portion of my downtime playing chess online and learning Italian.
