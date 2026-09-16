@@ -23,9 +23,3 @@ Key aspects of my work included:
 - **State Estimation:** Implementing sensor fusion and estimation algorithms to accurately determine the robot's pose, velocity, and orientation in real-time.
 - **Low-Level Control Architecture:** Developing the control loops that interface directly with the robot's hardware. This involved bridging the gap between high-level trajectory planning and the actual motor commands required to execute those movements smoothly.
 - **ROS Integration:** Structuring the control and estimation nodes within the ROS ecosystem, ensuring real-time performance and efficient message passing between the hardware interfaces and the higher-level logic.
-
-## Source Code
-
-The complete source code for the project, including the ROS packages and implementation details, is available on GitHub:
-
-[ScudeT/Ringo-walks repository](https://github.com/ScudeT/Ringo-walks)

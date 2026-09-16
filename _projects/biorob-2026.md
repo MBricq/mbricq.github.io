@@ -20,8 +20,6 @@ To address this, we developed a lightweight proprioceptive approach to reconstru
 
 Instead of relying on extensive data-driven training or complex material modifications, our method embeds a single commercial capacitive bend sensor directly inside the actuator's central core. This sensor measures the net tip bending, which is then mapped to the full actuator shape using a Piecewise Constant Curvature (PCC) model.
 
-The code is accessible on [GitHub](https://www.github.com/MBricq/SoftProprio3D/).
-
 ### Key Results
 
 - **Accuracy:** The sensor-based method maintains high tracking fidelity and effectively decouples state estimation from mechanical hysteresis. It achieves millimeter-level Cartesian accuracy (mean tip error of 2.48mm) and high angular precision (0.35°).

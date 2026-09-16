@@ -17,6 +17,31 @@ layout: default
     {{ content }}
   </article>
 
+  {% if page.collection == 'projects' and page.github %}
+    {% assign github_ref = page.github | strip %}
+    {% if github_ref contains '://' %}
+      {% assign github_url = github_ref %}
+    {% else %}
+      {% assign github_url = 'https://github.com/' | append: github_ref %}
+    {% endif %}
+
+    {% assign github_label = github_url
+      | replace: 'https://github.com/', ''
+      | replace: 'https://www.github.com/', ''
+      | replace: 'http://github.com/', ''
+      | replace: 'http://www.github.com/', ''
+    %}
+
+    {% unless content contains github_url %}
+      <section class="project-source mt-4">
+        <h2>Source Code</h2>
+        <p>
+          <a href="{{ github_url }}" target="_blank" rel="noopener noreferrer">{{ github_label }}</a>
+        </p>
+      </section>
+    {% endunless %}
+  {% endif %}
+
   {% if page.related_publications %}
     <h2>References</h2>
     <div class="publications">
