@@ -12,6 +12,8 @@ tags: ["BioRob", "Soft Robotics", "Proprioception", "State Estimation", "Video"]
 
 This page provides an overview of my research paper accepted for the IEEE International Conference on Biomedical Robotics and Biomechatronics (BioRob) in June 2026. The work is titled **"Real-Time 3D Proprioception for Soft Robots Using a Single Capacitive Bend Sensor"**.
 
+**[Read the full paper on IEEE Xplore ➔](https://doi.org/10.1109/BioRob66782.2026.11681017)**
+
 ### Overview
 
 A core challenge in soft robotics is determining the exact position of the robot in a continuous state space. Traditional open-loop control methods struggle with continuous deformation and nonlinearities like cable slacking, while external camera systems are generally limited to laboratory settings.
@@ -35,3 +37,20 @@ The supplementary video below demonstrates the experimental setup, the real-time
         {% include video.liquid path="assets/video/biorob_2026_mrbricq.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
+
+### Citation
+
+If you found this work useful, please cite our paper:
+
+> M. R. Bricq, E. Bianchi, F. Braghin, E. Ambrosini, and M. Gandolla, "Real-Time 3D Proprioception for Soft Robots Using a Single Capacitive Bend Sensor," _2026 11th IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)_, 2026. DOI: [10.1109/BioRob66782.2026.11681017](https://doi.org/10.1109/BioRob66782.2026.11681017)
+
+```bibtex
+@inproceedings{bricq2026realtime,
+  title={Real-Time 3D Proprioception for Soft Robots Using a Single Capacitive Bend Sensor},
+  author={Bricq, Marin R. and Bianchi, Emanuele and Braghin, Francesco and Ambrosini, Emilia and Gandolla, Marta},
+  booktitle={2026 11th IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)},
+  year={2026},
+  organization={IEEE},
+  doi={10.1109/BioRob66782.2026.11681017}
+}
+```
